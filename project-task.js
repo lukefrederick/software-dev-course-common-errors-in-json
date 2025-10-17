@@ -70,6 +70,38 @@ const invalidBookingJSON = `
 `;
 
 
+
+// Corrected and validated JSON:
+
+// {
+//     "hotelName": "Grand City Hotel",
+//     "checkInDate": "2024-05-15",
+//     "checkOutDate": "2024-05-20",
+//     "guests": [
+//         {
+//             "name": "Alice Johnson",
+//             "age": 30,
+//             "email": "alice.johnson@example.com"
+//         },
+//         {
+//             "name": "Bob Smith",
+//             "age": null,
+//             "email": "bob.smith@example"
+//         }
+//     ],
+//     "roomDetails": {
+//         "type": "Suite",
+//         "pricePerNight": 200,
+//         "amenities": [
+//             "WiFi",
+//             "Breakfast",
+//             "Parking"
+//         ]
+//     }
+// }
+
+
+
 // ============================================
 // ✅ Requirements
 // ============================================
@@ -83,6 +115,11 @@ const invalidBookingJSON = `
 */
 
 
+// Fixes: removed const and name at the start as well as the comma and
+// started the json with a curly brace. I also removed the semicolon from the 
+// end. Changed undefined to null, wrapped name in quotes, added a comma after amenities,
+// and added a comma after checkInDate. Finally, removed the comma in the Array.
+
 // ============================================
 // 🤔 Follow-Up Questions
 // ============================================
@@ -91,7 +128,8 @@ const invalidBookingJSON = `
 💬 Reflect and answer the following:
 
 1️⃣ What tools or techniques did you use to identify the errors?
-
+Initially read through the code and found a few errors but moved the json to
+a json file to get error messages.
 2️⃣ How did you confirm that your corrected JSON file was valid?
 
 3️⃣ Which errors were the most difficult to spot? Why?
